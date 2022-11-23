@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="王涵">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<title>自我介绍</title>
+<body>
+    <p>time:</p>
+    <p id="demo"></p>
+    <script>
+    var myVar=setInterval(function(){myTimer()},1000);
+    function myTimer(){
+        var d=new Date();
+        var t=d.toLocaleTimeString();
+        document.getElementById("demo").innerHTML=t;
+    }
+    </script>
+    <h2 style="background-color:rgb(50, 50, 50)">欢迎来到我的页面
+    <img src="qinli.jpg" align="top" width="70" height="70" alt="qinli" usemap="#ql">
+    <map name="ql">
+        <area shape="circle" coords="50,50,50" alt="ql" target="_blank" href="https://sedom.fzf404.art/">
+    </map></h2>
+    <h4  style="color:red">大家好<span class="jump theme">😀</span> </h4>
+    <h5><b>我叫王涵，来自河北沧州。</b></h5>
+    <p><i>我有很多兴趣爱好，比如敲代码，打羽毛球，跑步。<br>
+    今天有幸来到琴理工作室，希望交到更多朋友。<br>
+    下面是我室友的一些自我介绍。</i>
+    </p>
+    <a  class="a-red" target="_blank" href="liulong.html"><font size="6">刘龙</font></a>
+    <a class="a-red"  target="_blank" href="jianwei.html"><font size="6">建玮</font></a>
+
+    <!--<style>
+    .c{
+        color: red;
+    }
+    </style>-->
+<!--<script>setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);</script>-->
+</body>
+
+    <body>
+        <input type="text" name="" id="myname" placeholder="请输入名字">
+        <input type="text" name="" id="myintor" placeholder="请输入介绍">
+        <input type="button" name="" id="" value="提交" onclick="setinfo()">
+    </body>
+    <script>
+        let myname = document.getElementById('myname')
+        let myintor = document.getElementById('myintor')
+        function setinfo() {
+            let i;
+            for (i = 0; i >= 0;) {
+                let ifname = localStorage.getItem('name' + i)
+                if (localStorage.getItem('name' + i) != null) {
+                    i++
+                    console.log('key 存在' + 'key的值为' + ifname)
+                    continue;
+                } else {
+                    console.log('key 不存在')
+                    localStorage.setItem('name' + i, myname.value)
+                    localStorage.setItem('intor' + i, myintor.value)
+                    myname.value = ''
+                    myintor.value = ''
+                    break;
+                }
+            }
+        }
+    </script>
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sedom/dist/sedom.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sedom/dist/sedom.min.js"></script>
+</html>
